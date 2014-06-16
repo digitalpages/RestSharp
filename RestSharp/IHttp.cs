@@ -24,7 +24,7 @@ namespace RestSharp
 {
 	public interface IHttp
 	{
-		Action<Stream> ResponseWriter { get; set; }
+		Action<Stream, long> ResponseWriter { get; set; }
 #if !PocketPC
 		CookieContainer CookieContainer { get; set; }
 #endif

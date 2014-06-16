@@ -49,7 +49,7 @@ namespace RestSharp
 		/// <summary>
 		/// Set this to write response to Stream rather than reading into memory.
 		/// </summary>
-		public Action<Stream> ResponseWriter { get; set; }
+		public Action<Stream, long> ResponseWriter { get; set; }
 
 		/// <summary>
 		/// Determine whether or not the "default credentials" (e.g. the user account under which the current process is running)

@@ -120,7 +120,7 @@ namespace RestSharp
 		/// <summary>
 		/// The method to use to write the response instead of reading into RawBytes
 		/// </summary>
-		public Action<Stream> ResponseWriter { get; set; }
+		public Action<Stream, long> ResponseWriter { get; set; }
 		/// <summary>
 		/// Collection of files to be sent with request
 		/// </summary>
@@ -431,7 +431,7 @@ namespace RestSharp
 			}
 			else
 			{
-				ResponseWriter(webResponseStream);
+				ResponseWriter(webResponseStream, response.ContentLength);
 			}
 		}
 

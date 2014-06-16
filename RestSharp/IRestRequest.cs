@@ -44,7 +44,7 @@ namespace RestSharp
 		/// <summary>
 		/// Set this to write response to Stream rather than reading into memory.
 		/// </summary>
-		Action<Stream> ResponseWriter { get; set; }
+		Action<Stream, long> ResponseWriter { get; set; }
 
 		/// <summary>
 		/// Container of all HTTP parameters to be passed with the request. 
